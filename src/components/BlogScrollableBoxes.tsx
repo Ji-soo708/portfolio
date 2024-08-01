@@ -1,0 +1,37 @@
+import React from 'react';
+import Redis from '../assets/image/redis.png';
+import Mocacong from '../assets/image/mocacong_main.png';
+import Baroging from '../assets/image/baroging_main.png';
+import S3 from '../assets/image/s3.png';
+
+const boxes = [
+  { id: 1, tag: 'Backend', name: 'Redis 캐시를 통해 <br />조회 성능 개선하기', image: Redis, date: 'January 24 2024.', color: '#FFFFFF' },
+  { id: 2, tag: 'Backend', name: '코드 정적 분석을 위한 <br />SonarCloud 도입기', image: Mocacong, date: 'January 24 2024.', color: '#1D1D1F' },
+  { id: 3, tag: 'Backend', name: 'Pre-Signed Url을 이용하여 <br />S3로 파일 업로드하기', image: S3, date: 'January 24 2024.', color: '#1D1D1F' },
+  { id: 4, tag: 'Backend', name: 'Pre-Signed Url을 이용하여 <br />S3로 파일 업로드하기', image: Baroging, date: 'January 24 2024.', color: '#FFFFFF' },
+];
+
+const BlogScrollableBoxes: React.FC = () => {
+  return (
+    <div className="overflow-x-auto py-4 mx-5">
+      <div className="flex space-x-5">
+        {boxes.map((box, index) => (
+          <div
+          key={box.id}
+          className="flex-shrink-0 w-[399px] h-[499px] bg-cover bg-center rounded-[18px] relative shadow-lg"
+          style={{ backgroundImage: `url(${box.image})`, marginRight: index !== boxes.length - 1 ? '20px' : '0' }}
+          >
+            
+            <div className="absolute top-4 left-4 flex flex-col space-y-2 mt-5 ml-5">
+              <span className="text-xs font-bold" style={{ color: '#6E6E73' }}>{box.tag}</span>
+              <span className="text-3xl font-bold" style={{ color: box.color }} dangerouslySetInnerHTML={{ __html: box.name }} />
+              <span className="text-lg" style={{ color: box.color }}>{box.date}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default BlogScrollableBoxes;
