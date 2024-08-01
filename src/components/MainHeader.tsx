@@ -4,15 +4,15 @@ import Sticker from '../assets/svg/jisu-sticker.svg';
 const Header: React.FC = () => {
   return (
     <header className="relative">
-      <div className="bg-gray-200 py-16 px-4">
+      <div className="py-16">
         {/* 중앙 정렬을 위한 컨테이너 */}
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-between">
           {/* 왼쪽 정렬된 텍스트를 감싸는 컨테이너 */}
-          <div className="flex flex-col items-start text-center mx-4 max-w-2xl sm:max-w-md">
-            <p className="text-5xl font-bold mb-4 text-[#6E6E73] sm:text-4xl">
+          <div className="flex flex-col items-start text-center mx-4 max-w-2xl mr-10">
+            <p className="text-[46px] font-bold mb-4 text-[#6E6E73]">
               동반 성장을 추구하는 개발자
             </p>
-            <p className="text-5xl font-bold text-black sm:text-4xl">
+            <p className="text-[46px] font-bold text-black">
               `임지수`입니다.
             </p>
             <a href="https://github.com" target="_blank" rel="noopener noreferrer">
@@ -22,7 +22,7 @@ const Header: React.FC = () => {
             </a>
           </div>
           {/* 오른쪽 부분: 스티커 */}
-          <div className="w-[300px] h-[300px] ml-10 flex-shrink-0">
+          <div className="w-[300px] h-[300px] flex-shrink-0 mb-10 mr-36">
             <img src={Sticker} alt="Sticker" className="w-full h-full object-contain" />
           </div>
         </div>
