@@ -16,7 +16,7 @@ const Header: React.FC = () => {
               `임지수`입니다.
             </p>
             <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-              <p className="text-sm text-[#1D1D1F] mt-8 underline mx-1">
+              <p className="text-2xl text-[#1D1D1F] mt-8 underline mx-1">
                 About Me
               </p>
             </a>
