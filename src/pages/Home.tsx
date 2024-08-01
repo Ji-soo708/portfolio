@@ -48,7 +48,7 @@ function Home() {
         <div className='flex flex-col items-start'>
           <div className="flex space-x-2 ml-5">
             <p className="text-2xl font-bold text-[#1D1D1F] mt-20">
-              Etcg.
+              Etc.
             </p>
             <p className="text-2xl font-bold text-[#6E6E73] mt-20">
               성장과 배움의 순간들.
