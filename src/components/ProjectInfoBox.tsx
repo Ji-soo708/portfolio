@@ -46,29 +46,34 @@ interface ProjectInfoBoxProps {
 
 const ProjectInfoBox: React.FC<ProjectInfoBoxProps> = ({ links, skills, aboutText, details }) => {
     return (
-        <div className="flex justify-center items-center mt-24">
-            <div className="w-[516px] h-[458px] p-4 relative">
-                <div className="text-3xl font-bold">Links</div>
-                <div className="flex flex-col mt-8">
-                    {links.slice(0, 4).map((link, index) => (
-                        <IconText key={index} icon={link.icon} text={link.text} />
-                    ))}
+        <div className="flex flex-col items-center mt-24 mb-32">
+            <div className="flex justify-center items-start w-full max-w-[910px]">
+                <div className="w-[516px] h-[458px] p-4 relative">
+                    <div className="text-2xl font-bold">Links</div>
+                    <div className="flex flex-col mt-8">
+                        {links.slice(0, 4).map((link, index) => (
+                            <IconText key={index} icon={link.icon} text={link.text} />
+                        ))}
+                    </div>
+                    <div className='text-2xl font-bold mt-64'>
+                        What I did
+                    </div>
                 </div>
-            </div>
-            <div className="w-px h-[458px] bg-black opacity-10"></div>
-            <div className="w-[490px] h-[458px] p-4 relative">
-                <div className="text-3xl font-bold ms-4">UsedSkills</div>
-                <div className="flex flex-wrap mt-4 ms-3 gap-2 mb-10">
-                    {skills.map((skill, index) => (
-                        <SkillBox key={index} text={skill} />
-                    ))}
-                </div>
-                <div className="text-3xl font-bold mt-4 ms-4">About</div>
-                <div className="w-[470px] h-48 p-4 mt-1">
-                    <p className="text-lg" dangerouslySetInnerHTML={{ __html: aboutText }}></p>
-                </div>
-                <div className="w-[470px] p-4 mt-1">
-                    <p className="text-sm text-custom-gray">{details}</p>
+                <div className="w-px h-[458px] bg-black opacity-10"></div>
+                <div className="w-[490px] h-[458px] p-4 relative">
+                    <div className="text-2xl font-bold ms-4">Used Skills</div>
+                    <div className="flex flex-wrap mt-4 ms-3 gap-2 mb-10">
+                        {skills.map((skill, index) => (
+                            <SkillBox key={index} text={skill} />
+                        ))}
+                    </div>
+                    <div className="text-2xl font-bold mt-4 ms-4">About</div>
+                    <div className="w-[470px] h-48 p-4 mt-1">
+                        <p className="text-lg" dangerouslySetInnerHTML={{ __html: aboutText }}></p>
+                    </div>
+                    <div className="w-[470px] p-4 mt-1">
+                        <p className="text-sm text-custom-gray">{details}</p>
+                    </div>
                 </div>
             </div>
         </div>
