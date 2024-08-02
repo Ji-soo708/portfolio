@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Toolbar: React.FC = () => {
   return (
-    <div className="w-full max-w-[1512px] h-[40px] bg-black/80 mx-auto flex items-center px-4">
+    <div className="w-full max-w-[1512px] h-[37px] bg-black/70 mx-auto flex items-center px-4">
       <div className="flex-grow" />
       <div className="flex space-x-[34px] pr-[117px]">
         <Link to="/" className="text-white">Home</Link>

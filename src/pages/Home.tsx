@@ -10,7 +10,7 @@ function Home() {
   return (
     <div>
       <Toolbar />
-      <div className="ml-36">
+      <div className="ml-48">
         <Header />
         <div className='flex flex-col items-start mt-6'>
           <div className="flex space-x-2 ml-5">
