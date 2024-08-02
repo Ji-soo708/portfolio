@@ -1,83 +1,65 @@
-import React from 'react';
-import Github from '../assets/svg/github.svg';
-import GooglePlay from '../assets/svg/google-play.svg';
-import Instagram from '../assets/svg/instagram.svg';
-import Medium from '../assets/svg/medium.svg';
-import Site from '../assets/svg/site.svg';
-import SkillBox from './SkillBox';
-
-interface IconTextProps {
-    icon: string;
-    text: string;
-}
-
-const IconText: React.FC<IconTextProps> = ({ icon, text }) => {
-    const getIcon = (iconName: string) => {
-        switch (iconName) {
-            case 'Github':
-                return <img src={Github} alt="Github" className="w-8 h-8" />;
-            case 'GooglePlay':
-                return <img src={GooglePlay} alt="GooglePlay" className="w-8 h-8" />;
-            case 'Instagram':
-                return <img src={Instagram} alt="Instagram" className="w-8 h-8" />;
-            case 'Medium':
-                return <img src={Medium} alt="Medium" className="w-8 h-8" />;
-            case 'Site':
-                return <img src={Site} alt="Site" className="w-8 h-8" />;
-            default:
-                return null;
-        }
-    };
-
-    return (
-        <div className="flex items-center mb-4">
-            {getIcon(icon)}
-            <span className="ml-4 text-lg">{text}</span>
-        </div>
-    );
-};
+import React from "react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import SkillBox from "./SkillBox";
+import IconText from "./IconText";
 
 interface ProjectInfoBoxProps {
-    links: { icon: string; text: string }[];
-    skills: string[];
-    aboutText: string;
-    details: string;
+  date: string;
+  links: { icon: string; url: string }[];
+  roleText: string;
+  skills: string[];
+  aboutText: string;
+  details: string;
 }
 
-const ProjectInfoBox: React.FC<ProjectInfoBoxProps> = ({ links, skills, aboutText, details }) => {
-    return (
-        <div className="flex flex-col items-center mt-24 mb-32">
-            <div className="flex justify-center items-start w-full max-w-[910px]">
-                <div className="w-[516px] h-[458px] p-4 relative">
-                    <div className="text-2xl font-bold">Links</div>
-                    <div className="flex flex-col mt-8">
-                        {links.slice(0, 4).map((link, index) => (
-                            <IconText key={index} icon={link.icon} text={link.text} />
-                        ))}
-                    </div>
-                    <div className='text-2xl font-bold mt-64'>
-                        What I did
-                    </div>
-                </div>
-                <div className="w-px h-[458px] bg-black opacity-10"></div>
-                <div className="w-[490px] h-[458px] p-4 relative">
-                    <div className="text-2xl font-bold ms-4">Used Skills</div>
-                    <div className="flex flex-wrap mt-4 ms-3 gap-2 mb-10">
-                        {skills.map((skill, index) => (
-                            <SkillBox key={index} text={skill} />
-                        ))}
-                    </div>
-                    <div className="text-2xl font-bold mt-4 ms-4">About</div>
-                    <div className="w-[470px] h-48 p-4 mt-1">
-                        <p className="text-lg" dangerouslySetInnerHTML={{ __html: aboutText }}></p>
-                    </div>
-                    <div className="w-[470px] p-4 mt-1">
-                        <p className="text-sm text-custom-gray">{details}</p>
-                    </div>
-                </div>
-            </div>
+const ProjectInfoBox: React.FC<ProjectInfoBoxProps> = ({
+  date,
+  links,
+  roleText,
+  skills,
+  aboutText,
+  details,
+}) => {
+  return (
+    <div className="flex flex-col items-center mt-24 mb-28">
+      <div className="flex justify-center w-full max-w-[910px]">
+        <div className="w-[516px] p-4">
+          <div className="text-lg italic text-custom-gray font-semibold mb-1">
+            {date}
+          </div>
+          <div className="text-2xl font-bold mb-4">Links</div>
+          <div className="flex flex-row gap-1 mb-10">
+            {links.map((link, index) => (
+              <IconText key={index} icon={link.icon} url={link.url} />
+            ))}
+          </div>
+          <div className="text-2xl font-bold mb-4">Role</div>
+          <div className="text-base mb-10">
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+              {roleText}
+            </ReactMarkdown>
+          </div>
         </div>
-    );
+        <div className="w-px bg-black opacity-10"></div>
+        <div className="w-[490px] p-4">
+          <div className="text-2xl font-bold mb-6">Used Skills</div>
+          <div className="flex flex-wrap gap-2 mb-10">
+            {skills.map((skill, index) => (
+              <SkillBox key={index} text={skill} />
+            ))}
+          </div>
+          <div className="text-2xl font-bold mb-4">About</div>
+          <div className="text-base mb-4">
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+              {aboutText}
+            </ReactMarkdown>
+          </div>
+          <p className="text-sm text-custom-gray">{details}</p>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default ProjectInfoBox;

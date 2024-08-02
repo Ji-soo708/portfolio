@@ -1,24 +1,26 @@
-import React from 'react';
+import React from "react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 interface ProjectContentBoxProps {
-    subtitle: string;
-    content: string;
+  subtitle: string;
+  content: string;
 }
 
-const ProjectContentBox: React.FC<ProjectContentBoxProps> = ({ subtitle, content }) => {
-    return (
-        <div className="mt-4 ms-1 flex justify-center">
-            <div className="w-[910px] p-5">
-                <div className='text-xl font-semibold'>
-                    <span className='text-2xl font-semibold'>#{' '}</span>{subtitle}
-                </div>
-                <div
-                    className='text-lg mt-3 ms-1 me-1'
-                    dangerouslySetInnerHTML={{ __html: content }}
-                />
-            </div>
+const ProjectContentBox: React.FC<ProjectContentBoxProps> = ({
+  subtitle,
+  content,
+}) => {
+  return (
+    <div className="flex justify-center mb-9">
+      <div className="w-[850px]">
+        <div className="text-lg font-bold mb-3">{subtitle}</div>
+        <div className="text-base">
+          <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
         </div>
-    );
-}
+      </div>
+    </div>
+  );
+};
 
 export default ProjectContentBox;
