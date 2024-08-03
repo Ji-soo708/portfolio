@@ -20,7 +20,7 @@ const Header: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <p className="text-2xl text-[#1D1D1F] mt-8 underline">About Me</p>
+              <p className="text-xl text-[#1D1D1F] mt-8 underline">About Me</p>
             </a>
           </div>
           {/* 오른쪽 부분: 스티커 */}
