@@ -5,26 +5,26 @@ import ProjectHeader from "../components/ProjectHeader";
 import ProjectInfoBox from "../components/ProjectInfoBox";
 import ProjectContentBox from "../components/ProjectContentBox";
 
+const links = [
+  { icon: "Github", url: "https://github.com/goo-rm-dari/BE" },
+  {
+    icon: "Site",
+    url: "https://9oormthon.goorm.io/b38751d3-000e-4857-9f3c-af002f69277f",
+  },
+];
+
+const skills = [
+  "SpringBoot 3",
+  "Spring DataJPA",
+  "Java 17",
+  "MariaDB",
+  "Kubernetis",
+];
+
 const Baroging: React.FC = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  const links = [
-    { icon: "Github", url: "https://github.com/goo-rm-dari/BE" },
-    {
-      icon: "Site",
-      url: "https://9oormthon.goorm.io/b38751d3-000e-4857-9f3c-af002f69277f",
-    },
-  ];
-
-  const skills = [
-    "SpringBoot 3",
-    "Spring DataJPA",
-    "Java 17",
-    "MariaDB",
-    "Kubernetis",
-  ];
 
   return (
     <div>

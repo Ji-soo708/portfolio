@@ -5,34 +5,34 @@ import ProjectHeader from "../components/ProjectHeader";
 import ProjectInfoBox from "../components/ProjectInfoBox";
 import ProjectContentBox from "../components/ProjectContentBox";
 
+const links = [
+  { icon: "Github", url: "https://github.com/depromeet/14th-team5-BE" },
+  { icon: "Site", url: "https://bibbi.app" },
+  {
+    icon: "AppStore",
+    url: "https://apps.apple.com/kr/app/bibbi/id6475082088",
+  },
+  {
+    icon: "GooglePlay",
+    url: "https://play.google.com/store/search?q=삐삐&c=apps",
+  },
+  { icon: "Medium", url: "Medium" },
+];
+
+const skills = [
+  "SpringBoot 3",
+  "Spring DataJPA",
+  "Java 17",
+  "MariaDB",
+  "Flyway",
+  "Redis",
+  "Terraform",
+];
+
 const Bibbi: React.FC = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  const links = [
-    { icon: "Github", url: "https://github.com/depromeet/14th-team5-BE" },
-    { icon: "Site", url: "https://bibbi.app" },
-    {
-      icon: "AppStore",
-      url: "https://apps.apple.com/kr/app/bibbi/id6475082088",
-    },
-    {
-      icon: "GooglePlay",
-      url: "https://play.google.com/store/search?q=삐삐&c=apps",
-    },
-    { icon: "Medium", url: "Medium" },
-  ];
-
-  const skills = [
-    "SpringBoot 3",
-    "Spring DataJPA",
-    "Java 17",
-    "MariaDB",
-    "Flyway",
-    "Redis",
-    "Terraform",
-  ];
 
   return (
     <div>

@@ -5,32 +5,32 @@ import ProjectHeader from "../components/ProjectHeader";
 import ProjectInfoBox from "../components/ProjectInfoBox";
 import ProjectContentBox from "../components/ProjectContentBox";
 
+const links = [
+  { icon: "Github", url: "https://github.com/mocacong/Mocacong-Backend" },
+  {
+    icon: "AppStore",
+    url: "https://apps.apple.com/kr/app/mocacong/id6446925939",
+  },
+  {
+    icon: "GooglePlay",
+    url: "https://play.google.com/store/search?q=모카콩&c=apps",
+  },
+];
+
+const skills = [
+  "SpringBoot 2",
+  "Spring DataJPA",
+  "Java 11",
+  "MySQL",
+  "JUnit",
+  "Redis",
+  "AWS",
+];
+
 function Mocacong() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  const links = [
-    { icon: "Github", url: "https://github.com/mocacong/Mocacong-Backend" },
-    {
-      icon: "AppStore",
-      url: "https://apps.apple.com/kr/app/mocacong/id6446925939",
-    },
-    {
-      icon: "GooglePlay",
-      url: "https://play.google.com/store/search?q=모카콩&c=apps",
-    },
-  ];
-
-  const skills = [
-    "SpringBoot 2",
-    "Spring DataJPA",
-    "Java 11",
-    "MySQL",
-    "JUnit",
-    "Redis",
-    "AWS",
-  ];
 
   return (
     <div>
