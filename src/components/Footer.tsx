@@ -5,7 +5,7 @@ import Email from "../assets/svg/email.svg";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#191919] flex items-center justify-center mt-40">
+    <footer className="bg-[#191919] flex items-center justify-center mt-64">
       <div className="py-16 text-left">
         <div className="w-24 text-white h-8 mb-4 font-bold ml-0.5">Contact</div>
         <div className="w-[700px] text-[#C5C5C5] h-16 mb-4 ml-0.5">

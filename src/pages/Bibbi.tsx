@@ -60,6 +60,15 @@ Redis를 이용한 성능 개선
       <div className="flex justify-center mb-4">
         <div className="p-5 w-[940px] bg-white shadow-md rounded-[25px]">
           <ProjectContentBox
+            subtitle={`멀티모듈 아키텍처`}
+            content={`장기 프로젝트의 경우, 시간이 흐를수록 기능이 추가되면서 서비스가 점차적으로 복잡해지고 확장됩니다. 이로 인해 클라이언트 서비스와 운영 시스템이 분리되며, 각 프로그램에 존재하는 도메인의 동일성이 깨질수 있다는 문제점이 생길 수 있습니다. 
+
+ㅤ
+
+Bibbi 프로젝트는 MVP 기능이 완료된 후에도 지속적인 운영을 위해 기능을 확장하고 유지보수할 계획입니다. 유지보수 및 확장성을 고려하여, 각 모듈을 분산시켜 높은 응집도와 낮은 결합도를 가진 멀티모듈 아키텍처를 도입하여 프로젝트를 진행 중입니다. 이를 통해 각 도메인 간의 의존성을 최소화하고 효율적인 개발 및 유지보수를 하고자 합니다.`}
+          />
+
+          <ProjectContentBox
             subtitle={`Flyway를 통한 
 
 안전한 DB 형상관리 수행`}
