@@ -6,10 +6,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['San Francisco', 'Apple SD Gothic Neo', 'sans-serif'],
+        sans: ['Apple SD Gothic Neo', 'San Francisco', 'sans-serif'],
       },
       colors: {
         'custom-gray': '#6E6E73',
+        'subtitle-gray': '#424245'
       }
     },
   },
