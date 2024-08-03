@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Toolbar from "../components/Toolbar";
 import Header from "../components/MainHeader";
 import ProjectScrollableBoxes from "../components/ProjectScrollableBoxes";
@@ -8,6 +8,10 @@ import EtcScrollableBoxes from "../components/EtcScrollableBoxes";
 import Footer from "../components/Footer";
 
 function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       <Toolbar />

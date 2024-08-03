@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Toolbar from "../components/Toolbar";
 import MocacongImage from "../assets/svg/mocacong-project.svg";
 import ProjectHeader from "../components/ProjectHeader";
@@ -5,6 +6,10 @@ import ProjectInfoBox from "../components/ProjectInfoBox";
 import ProjectContentBox from "../components/ProjectContentBox";
 
 function Mocacong() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const links = [
     { icon: "Github", url: "https://github.com/mocacong/Mocacong-Backend" },
     {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Toolbar from "../components/Toolbar";
 import BibbiImage from "../assets/svg/bibbi-project.svg";
 import ProjectHeader from "../components/ProjectHeader";
@@ -6,6 +6,10 @@ import ProjectInfoBox from "../components/ProjectInfoBox";
 import ProjectContentBox from "../components/ProjectContentBox";
 
 const Bibbi: React.FC = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const links = [
     { icon: "Github", url: "https://github.com/depromeet/14th-team5-BE" },
     { icon: "Site", url: "https://bibbi.app" },

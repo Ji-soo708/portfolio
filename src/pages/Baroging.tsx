@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Toolbar from "../components/Toolbar";
 import BarogingImage from "../assets/svg/baroging_background.svg";
 import ProjectHeader from "../components/ProjectHeader";
@@ -6,6 +6,10 @@ import ProjectInfoBox from "../components/ProjectInfoBox";
 import ProjectContentBox from "../components/ProjectContentBox";
 
 const Baroging: React.FC = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const links = [
     { icon: "Github", url: "https://github.com/goo-rm-dari/BE" },
     {
