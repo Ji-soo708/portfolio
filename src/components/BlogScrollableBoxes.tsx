@@ -53,22 +53,28 @@ const BlogScrollableBoxes: React.FC = () => {
             href={box.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-shrink-0 w-[399px] h-[499px] bg-cover bg-center rounded-[18px] relative shadow-lg"
+            className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[350px] lg:w-[399px] h-[380px] sm:h-[420px] md:h-[460px] lg:h-[499px] bg-cover bg-center rounded-[18px] relative shadow-lg"
             style={{
               backgroundImage: `url(${box.image})`,
               marginRight: index !== boxes.length - 1 ? "20px" : "0",
             }}
           >
             <div className="absolute top-4 left-4 flex flex-col space-y-2 mt-5 ml-5">
-              <span className="text-xs font-bold" style={{ color: "#6E6E73" }}>
+              <span
+                className="text-xs sm:text-sm font-bold"
+                style={{ color: "#6E6E73" }}
+              >
                 {box.tag}
               </span>
               <span
-                className="text-3xl font-bold"
+                className="text-xl sm:text-2xl md:text-3xl font-bold"
                 style={{ color: box.color }}
                 dangerouslySetInnerHTML={{ __html: box.name }}
               />
-              <span className="text-lg" style={{ color: box.color }}>
+              <span
+                className="text-sm sm:text-md md:text-lg"
+                style={{ color: box.color }}
+              >
                 {box.date}
               </span>
             </div>

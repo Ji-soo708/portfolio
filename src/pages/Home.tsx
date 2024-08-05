@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Toolbar from "../components/Toolbar";
-import Header from "../components/MainHeader";
+import Header from "../components/Header";
 import ProjectScrollableBoxes from "../components/ProjectScrollableBoxes";
 import BlogScrollableBoxes from "../components/BlogScrollableBoxes";
 import SkillScrollableBoxes from "../components/SkillScrollableBoxes";
@@ -15,9 +15,10 @@ function Home() {
   return (
     <div>
       <Toolbar />
-      <div className="ml-48">
+      <div className="ml-0 md:ml-12 lg:ml-24 xl:ml-48">
         <Header />
-        <div className="flex flex-col items-start mt-6">
+        {/* Project Section */}
+        <div className="flex flex-col items-start mt-3 lg:mt-5 xl:mt-5">
           <div className="flex space-x-2 ml-5">
             <p className="text-2xl font-bold text-[#1D1D1F] mt-20">Project.</p>
             <p className="text-2xl font-bold text-[#6E6E73] mt-20">
@@ -26,6 +27,8 @@ function Home() {
           </div>
         </div>
         <ProjectScrollableBoxes />
+
+        {/* Blog Section */}
         <div className="flex flex-col items-start">
           <div className="flex space-x-2 ml-5">
             <p className="text-2xl font-bold text-[#1D1D1F] mt-20">Dev-Blog.</p>
@@ -35,6 +38,8 @@ function Home() {
           </div>
         </div>
         <BlogScrollableBoxes />
+
+        {/* Skill Section */}
         <div className="flex flex-col items-start">
           <div className="flex space-x-2 ml-5">
             <p className="text-2xl font-bold text-[#1D1D1F] mt-20">Skill.</p>
@@ -44,6 +49,8 @@ function Home() {
           </div>
         </div>
         <SkillScrollableBoxes />
+
+        {/* Etc Section */}
         <div className="flex flex-col items-start">
           <div className="flex space-x-2 ml-5">
             <p className="text-2xl font-bold text-[#1D1D1F] mt-20">Etc.</p>

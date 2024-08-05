@@ -5,26 +5,35 @@ import Email from "../assets/svg/email.svg";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#191919] flex items-center justify-center mt-64">
-      <div className="py-16 text-left">
-        <div className="w-24 text-white h-8 mb-4 font-bold ml-0.5">Contact</div>
-        <div className="w-[700px] text-[#C5C5C5] h-16 mb-4 ml-0.5">
+    <footer className="bg-[#191919] flex items-center justify-center mt-32">
+      <div className="py-6 md:py-8 lg:py-10 text-left max-w-screen-lg w-full mx-6 sm:mx-8 md:mx-10 lg:mx-12">
+        {/* Contact Title */}
+        <div className="text-white font-bold text-base sm:text-lg md:text-xl mb-3">
+          Contact
+        </div>
+
+        {/* Description */}
+        <div className="text-[#C5C5C5] text-xs sm:text-sm md:text-base mb-3">
           The main stack is server development based on SpringBoot. And web
           front-end development is possible. I aim for an atmosphere where we
           all grow together through knowledge sharing and continue to pursue
           endless development.
         </div>
-        <div className="flex items-center mb-10 ml-0.5 text-[#C5C5C5]">
-          <img src={Email} alt="Email" className="w-5 h-5 mr-2" />
+
+        {/* Email Information */}
+        <div className="flex items-center text-[#C5C5C5] text-xs sm:text-sm md:text-base mb-6">
+          <img src={Email} alt="Email" className="w-4 h-4 md:w-5 md:h-5 mr-2" />
           dlawotn321@gmail.com
         </div>
-        <div className="flex">
+
+        {/* Social Icons */}
+        <div className="flex space-x-3">
           <a
             href="https://github.com/Ji-soo708"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={GitHub} alt="GitHub" className="w-8 h-8" />
+            <img src={GitHub} alt="GitHub" className="w-5 h-5 md:w-7 md:h-7" />
           </a>
           <a
             href="https://linkedin.com/in/limjisoo"
@@ -34,7 +43,7 @@ const Footer: React.FC = () => {
             <img
               src={LinkedIn}
               alt="LinkedIn"
-              className="w-5 h-5 mt-0.5 ml-2.5"
+              className="w-4 h-4 md:w-5 md:h-5"
             />
           </a>
         </div>
