@@ -13,7 +13,7 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({ imageSrc, text }) => {
           data={imageSrc}
           type="image/svg+xml"
           aria-label={text}
-          className="w-auto h-auto object-contain rounded-[15px] md:rounded-[25px]"
+          className="w-full md:w-[910px] h-auto md:h-[495px] object-contain rounded-[15px] md:rounded-[25px]"
         ></object>
       </div>
     </div>
