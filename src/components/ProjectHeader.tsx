@@ -12,7 +12,7 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({ imageSrc, text }) => {
         <img
           src={imageSrc}
           alt="Project"
-          className="w-full md:w-[910px] h-auto md:h-[495px] object-cover rounded-[15px] md:rounded-[25px]"
+          className="w-full md:w-[910px] h-auto md:h-[495px] object-contain rounded-[15px] md:rounded-[25px]"
         />
       </div>
     </div>
