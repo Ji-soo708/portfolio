@@ -33,12 +33,7 @@ const Footer: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <object
-              data={GitHub}
-              type="image/svg+xml"
-              aria-label="GitHub"
-              className="w-6 h-6 md:w-7 md:h-7"
-            />
+            <img src={GitHub} alt="GitHub" className="w-6 h-6 md:w-7 md:h-7" />
           </a>
           <a
             href="https://linkedin.com/in/limjisoo"
