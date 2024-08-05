@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import Toolbar from "../components/Toolbar";
 import MocacongImage from "../assets/svg/mocacong-project.svg";
 import ProjectHeader from "../components/ProjectHeader";
@@ -57,7 +57,7 @@ function Mocacong() {
         details="* 교내 대회 `Learning&Sharing 프로젝트형` 장려상 수상"
       />
       <div className="flex justify-center mb-4">
-        <div className="p-5 w-[940px] bg-white shadow-md rounded-[25px]">
+        <div className="p-5 w-full max-w-[940px] bg-white shadow-md rounded-[25px] mx-4 lg:mx-8">
           <ProjectContentBox
             subtitle={`# AOP와 ArgumentResolver를 
              

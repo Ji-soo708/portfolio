@@ -18,7 +18,7 @@ const skills = [
   "Spring DataJPA",
   "Java 17",
   "MariaDB",
-  "Kubernetis",
+  "Kubernetes",
 ];
 
 const Baroging: React.FC = () => {
@@ -29,7 +29,7 @@ const Baroging: React.FC = () => {
   return (
     <div>
       <Toolbar />
-      <ProjectHeader imageSrc={BarogingImage} text="bibbi" />
+      <ProjectHeader imageSrc={BarogingImage} text="baroging" />
       <ProjectInfoBox
         date={"2023.11 ~"}
         links={links}
@@ -51,7 +51,7 @@ k8s 환경에서의 서버/웹 배포
         details="* `구름톤 10기` 우수상 수상"
       />
       <div className="flex justify-center mb-4">
-        <div className="p-5 w-[940px] bg-white shadow-md rounded-[25px]">
+        <div className="p-5 w-full max-w-[940px] bg-white shadow-md rounded-[25px] mx-4 lg:mx-8">
           <ProjectContentBox
             subtitle="# 수집한 쓰레기 좌표 저장을 고려한 도메인 설계"
             content={`플로깅 활동 중 이동한 경로와 수집한 해양 쓰레기의 위치를 명확하게 구분하여 저장할 수 있도록 도메인 모델을 아래와 같이 설계했습니다. 
