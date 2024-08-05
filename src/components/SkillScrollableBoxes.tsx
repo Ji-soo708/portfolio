@@ -77,12 +77,19 @@ const BlogScrollableBoxes: React.FC = () => {
         {boxes.map((box, index) => (
           <div
             key={box.id}
-            className="flex-shrink-0 w-[312px] h-[240px] rounded-[18px] relative shadow-lg bg-white"
+            className="flex-shrink-0 w-[280px] h-[200px] md:w-[312px] md:h-[240px] rounded-[18px] relative shadow-lg bg-white"
             style={{ marginRight: index !== boxes.length - 1 ? "20px" : "0" }}
           >
-            <div className="absolute top-4 left-4 flex flex-col space-y-2 mt-5 ml-5">
-              <img src={box.image} alt="icon" className="w-8 h-8 mb-6" />
-              <span className="text-2xl font-bold" style={{ color: box.color }}>
+            <div className="absolute top-4 left-4 flex flex-col space-y-2 mt-4 ml-4 md:mt-5 md:ml-5">
+              <img
+                src={box.image}
+                alt="icon"
+                className="w-6 h-6 md:w-8 md:h-8 mb-4 md:mb-6"
+              />
+              <span
+                className="text-xl md:text-2xl font-bold"
+                style={{ color: box.color }}
+              >
                 {box.description}
               </span>
             </div>

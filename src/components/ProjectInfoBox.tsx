@@ -23,21 +23,20 @@ const ProjectInfoBox: React.FC<ProjectInfoBoxProps> = ({
 }) => {
   return (
     <div className="flex flex-col items-center mt-12 md:mt-24 mb-16 md:mb-36 px-4 md:px-0">
-      {/* 화면 크기에 상관없이 가로 정렬 유지 */}
-      <div className="flex flex-row justify-center w-full max-w-[910px]">
+      <div className="flex flex-col md:flex-row justify-center w-full max-w-[910px]">
         {/* 왼쪽 섹션 */}
-        <div className="flex-shrink-0 w-1/2 p-4">
-          <div className="text-sm md:text-lg italic text-custom-gray font-semibold mb-1">
+        <div className="flex-shrink-0 w-full md:w-1/2 p-4">
+          <div className="text-sm md:text-lg italic text-custom-gray font-semibold mb-2">
             {date}
           </div>
-          <div className="text-lg md:text-2xl font-bold mb-4">Links</div>
-          <div className="flex flex-row flex-wrap gap-2 mb-6 md:mb-8">
+          <div className="text-lg md:text-2xl font-bold mb-2">Links</div>
+          <div className="flex flex-row flex-wrap gap-2 mb-5 md:mb-8">
             {links.map((link, index) => (
               <IconText key={index} icon={link.icon} url={link.url} />
             ))}
           </div>
-          <div className="text-lg md:text-2xl font-bold mb-3">Role</div>
-          <div className="text-sm md:text-base mb-4 md:mb-6">
+          <div className="text-lg md:text-2xl font-bold mb-2">Role</div>
+          <div className="text-sm md:text-base">
             <ReactMarkdown remarkPlugins={[remarkGfm]}>
               {roleText}
             </ReactMarkdown>
@@ -45,18 +44,18 @@ const ProjectInfoBox: React.FC<ProjectInfoBoxProps> = ({
         </div>
 
         {/* 구분선 */}
-        <div className="w-px bg-black opacity-10 mx-2"></div>
+        <div className="w-px bg-black opacity-10 hidden md:block mx-2"></div>
 
         {/* 오른쪽 섹션 */}
-        <div className="flex-shrink-0 w-1/2 p-4">
-          <div className="text-lg md:text-2xl font-bold mb-3">Used Skills</div>
-          <div className="flex flex-wrap gap-2 mb-5 md:mb-7">
+        <div className="flex-shrink-0 w-full md:w-1/2 p-4">
+          <div className="text-lg md:text-2xl font-bold mb-2">Used Skills</div>
+          <div className="flex flex-wrap gap-1 md:gap-2 mb-5 md:mb-8">
             {skills.map((skill, index) => (
               <SkillBox key={index} text={skill} />
             ))}
           </div>
-          <div className="text-lg md:text-2xl font-bold mb-3">About</div>
-          <div className="text-sm md:text-base mb-4 md:mb-6">
+          <div className="text-lg md:text-2xl font-bold mb-2">About</div>
+          <div className="text-sm md:text-base mb-3">
             <ReactMarkdown remarkPlugins={[remarkGfm]}>
               {aboutText}
             </ReactMarkdown>

@@ -3,15 +3,15 @@ import Redis from "../assets/svg/redis.svg";
 import Goormthon from "../assets/svg/goormthon.svg";
 
 const boxes = [
-  {
-    id: 1,
-    tag: "Depromeet 14th",
-    name: "많이 늦은(?) <br />디프만 14기 회고",
-    image: Redis,
-    date: "January 24 2024.",
-    color: "#FFFFFF",
-    url: "https://ji-soo708.tistory.com/33",
-  },
+  // {
+  //   id: 1,
+  //   tag: "Depromeet 14th",
+  //   name: "많이 늦은(?) <br />디프만 14기 회고",
+  //   image: Redis,
+  //   date: "January 24 2024.",
+  //   color: "#FFFFFF",
+  //   url: "https://ji-soo708.tistory.com/33",
+  // },
   {
     id: 2,
     tag: "10th 9oormthon in Jeju",
