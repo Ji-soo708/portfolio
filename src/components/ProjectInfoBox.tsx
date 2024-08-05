@@ -22,7 +22,7 @@ const ProjectInfoBox: React.FC<ProjectInfoBoxProps> = ({
   details,
 }) => {
   return (
-    <div className="flex flex-col items-center mt-12 md:mt-24 mb-16 md:mb-36 px-4 md:px-0">
+    <div className="flex flex-col items-center mt-6 md:mt-24 mb-16 md:mb-36 px-4 md:px-0">
       <div className="flex flex-col md:flex-row justify-center w-full max-w-[910px]">
         {/* 왼쪽 섹션 */}
         <div className="flex-shrink-0 w-full md:w-1/2 p-4">
