@@ -109,7 +109,7 @@ const BlogScrollableBoxes: React.FC = () => {
         {boxes.map((box, index) => (
           <div
             key={box.id}
-            className={`flex-shrink-0 w-[280px] h-[200px] md:w-[312px] md:h-[240px] rounded-[18px] relative shadow-lg bg-white ${
+            className={`flex-shrink-0 w-[260px] h-[180px] md:w-[312px] md:h-[240px] rounded-[18px] relative shadow-lg bg-white ${
               index !== boxes.length - 1 ? "mr-5" : ""
             }`}
           >
@@ -117,9 +117,9 @@ const BlogScrollableBoxes: React.FC = () => {
               <img
                 src={box.image}
                 alt="icon"
-                className="w-6 h-6 md:w-8 md:h-8 mb-4 md:mb-6"
+                className="w-6 h-6 md:w-8 md:h-8 mb-3 md:mb-6"
               />
-              <span className={`text-xl md:text-2xl font-bold ${box.color}`}>
+              <span className={`text-lg md:text-2xl font-bold ${box.color}`}>
                 {box.description}
               </span>
             </div>

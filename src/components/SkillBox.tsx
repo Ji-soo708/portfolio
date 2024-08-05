@@ -6,7 +6,7 @@ interface SkillBoxProps {
 
 const SkillBox: React.FC<SkillBoxProps> = ({ text }) => {
   return (
-    <div className="inline-flex justify-center text-xs md:text-sm items-center px-3 md:px-4 py-1 md:py-1.5 rounded-full bg-[#E8E8ED] text-center mx-0.5">
+    <div className="inline-flex justify-center text-sm items-center px-4 py-1.5 rounded-full bg-[#E8E8ED] text-center mx-1">
       {text}
     </div>
   );
