@@ -65,9 +65,14 @@ const AboutMeHeader: React.FC = () => {
                     alt="Blog"
                     className="w-5 h-5 md:w-6 md:h-6 lg:w-8 lg:h-8"
                   />
-                  <span className="text-[12px] md:text-[14px] lg:text-[16px] font-medium">
+                  <a
+                    href="https://ji-soo708.tistory.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[12px] md:text-[14px] lg:text-[16px] font-medium hover:underline"
+                  >
                     https://ji-soo708.tistory.com
-                  </span>
+                  </a>
                 </div>
                 {/* Additional Text Below Blog */}
                 <div className="mt-6">

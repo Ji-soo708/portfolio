@@ -11,11 +11,16 @@ const ProjectContentBox: React.FC<ProjectContentBoxProps> = ({
   subtitle,
   content,
 }) => {
+  const containsUrl = subtitle.includes("https://");
+  const subtitleStyles = containsUrl ? "underline" : "";
+
   return (
     <div className="flex justify-center mb-16 px-4 md:px-0">
       <div className="w-full md:w-[860px] flex flex-col md:flex-row">
         <div className="flex items-start mr-3 mb-4 md:mb-0">
-          <div className="text-[15px] md:text-[17px] w-36 md:w-44 h-auto md:h-8 font-semibold flex-shrink-0 text-subtitle-gray text-left md:text-right">
+          <div
+            className={`text-[15px] md:text-[17px] w-36 md:w-44 h-auto md:h-8 font-semibold flex-shrink-0 text-subtitle-gray text-left md:text-right ${subtitleStyles}`}
+          >
             <ReactMarkdown remarkPlugins={[remarkGfm]}>
               {subtitle}
             </ReactMarkdown>

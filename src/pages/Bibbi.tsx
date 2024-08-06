@@ -64,7 +64,7 @@ Redis를 이용한 성능 개선
       <div className="flex justify-center mb-4">
         <div className="p-5 w-full max-w-[940px] bg-white shadow-md rounded-[25px] mx-4 lg:mx-8">
           <ProjectContentBox
-            subtitle={`멀티모듈 아키텍처`}
+            subtitle={`[멀티모듈 아키텍처](https://ji-soo708.tistory.com/20)`}
             content={`장기 프로젝트의 경우, 시간이 흐를수록 기능이 추가되면서 서비스가 점차적으로 복잡해지고 확장됩니다. 이로 인해 클라이언트 서비스와 운영 시스템이 분리되며, 각 프로그램에 존재하는 도메인의 동일성이 깨질수 있다는 문제점이 생길 수 있습니다. 
 
 ㅤ
@@ -82,9 +82,7 @@ DB 형상관리 수행`}
           />
 
           <ProjectContentBox
-            subtitle={`이미지 업로드를 위한 
-              
-S3 Pre-signedUrl 도입`}
+            subtitle={`[이미지 업로드를 위한 S3 Pre-signedUrl 도입](https://ji-soo708.tistory.com/24)`}
             content={`이미지 업로드는 JSON을 주고 받는 일반 API 요청에 비해 큰 부하를 발생시키는 작업입니다. Bibbi 프로젝트에서는 이미지 관련 기능들이 앞으로도 더 도입될 예정이기에 서버에 파일을 전송하고 이를 서버에서 버킷에 저장하는 이중 작업은 성능적으로 효과적이라 생각하지 않았습니다. 
 
 ㅤ
@@ -93,9 +91,7 @@ S3 Pre-signedUrl 도입`}
           />
 
           <ProjectContentBox
-            subtitle={`Redis를 이용한 
-
-조회 API 성능 개선`}
+            subtitle={`[Redis를 이용한 조회 API 성능 개선](https://ji-soo708.tistory.com/31)`}
             content={`Bibbi 서비스는 사용자들이 올린 피드 사진을 요약하여 보여주는 캘린더 기능이 존재합니다. 캘린더 조회 API의 응답 데이터는 다른 조회 데이터에 비해 잘 변경되지 않으면서 많은 조회가 이루어지는 데이터입니다. 이런 점들을 고려하여 Redis를 도입하여 캘린더 조회 API의 응답 데이터를 캐싱하여 매번 데이터베이스에서 데이터를 가져오는 비효율성을 줄여 성능 개선하기로 결정했습니다.
 
               ㅤ
