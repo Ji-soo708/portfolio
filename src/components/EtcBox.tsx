@@ -4,7 +4,7 @@ const EtcBox = () => {
       4. 기타
       <div className="flex flex-col md:flex-row items-start mt-4 mb-20 md:mb-28 lg:mb-40">
         {/* Left Box */}
-        <div className="flex-1 p-2 text-left text-sm md:text-sm lg:text-base md:mr-6 lg:mr-10">
+        <div className="flex-1 p-2 text-left text-sm md:text-sm lg:text-base">
           <span className="font-semibold block mb-0.5 md:mb-1 lg:mb-1.5">
             [IT 연합동아리] 디프만 14기 Server Part
           </span>
@@ -25,7 +25,7 @@ const EtcBox = () => {
         </div>
 
         {/* Right Box */}
-        <div className="flex-1 p-4 text-left text-sm md:text-sm lg:text-base md:ml-6 lg:ml-10">
+        <div className="flex-1 p-2 text-left text-sm md:text-sm lg:text-base">
           <span className="font-semibold block mb-0.5 md:mb-1 lg:mb-1.5">
             [교내 프로그램] 건국대학교 Learning&Sharing 프로젝트형
           </span>

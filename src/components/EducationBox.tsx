@@ -6,7 +6,7 @@ const EducationBox: React.FC = () => {
       1. 학력 사항
       <div className="flex flex-col md:flex-row items-start mt-4 mb-20 md:mb-28 lg:mb-40">
         {/* Left Box */}
-        <div className="flex-1 p-2 text-left text-sm md:text-sm lg:text-base md:mr-6 lg:mr-10">
+        <div className="flex-1 p-2 text-left text-sm md:text-sm lg:text-base">
           {/* University 1 */}
           <span className="font-semibold block">
             서울여자대학교 정보보호학과
@@ -33,7 +33,7 @@ const EducationBox: React.FC = () => {
         </div>
 
         {/* Right Box */}
-        <div className="flex-1 p-4 text-left text-sm md:text-sm lg:text-base md:ml-6 lg:ml-10">
+        <div className="flex-1 p-2 text-left text-sm md:text-sm lg:text-base">
           <span className="font-semibold block">
             SQL Developer (SQL 개발자)
           </span>
