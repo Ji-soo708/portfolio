@@ -4,6 +4,7 @@ import AboutMeHeader from "../components/AboutMeHeader";
 import EducationBox from "../components/EducationBox";
 import IntroduceBox from "../components/IntroduceBox";
 import ProjectSummaryBox from "../components/ProjectSummaryBox";
+import EtcBox from "../components/EtcBox";
 
 function AboutMe() {
   return (
@@ -14,6 +15,7 @@ function AboutMe() {
         <EducationBox />
         <IntroduceBox />
         <ProjectSummaryBox />
+        <EtcBox />
       </div>
     </div>
   );

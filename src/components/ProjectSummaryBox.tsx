@@ -1,4 +1,3 @@
-import React from "react";
 import AppStoreIcon from "../assets/svg/appstore.svg";
 import GooglePlayIcon from "../assets/svg/google-play.svg";
 import GithubIcon from "../assets/svg/github.svg";
