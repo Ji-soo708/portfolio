@@ -8,11 +8,11 @@ import Blog from "../assets/svg/writing.svg";
 const AboutMeHeader: React.FC = () => {
   return (
     <header className="relative">
-      <div className="py-12 md:py-16">
+      <div className="py-12 md:py-16 mb-5 md:mb-7 lg:mb-12">
         {/* 중앙 정렬을 위한 컨테이너 */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-between gap-8 px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-between gap-8">
           {/* 왼쪽 정렬된 텍스트를 감싸는 컨테이너 */}
-          <div className="flex flex-col items-start text-left max-w-2xl lg:max-w-full lg:mx-0 mx-4">
+          <div className="flex flex-col items-start text-left max-w-2xl lg:max-w-full">
             <p className="text-[14px] md:text-[20px] lg:text-[28px] font-bold mb-4 text-[#353538]">
               Backend Engineer
             </p>

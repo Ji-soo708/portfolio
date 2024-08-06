@@ -1,13 +1,19 @@
 import React from "react";
 import Toolbar from "../components/Toolbar";
 import AboutMeHeader from "../components/AboutMeHeader";
+import EducationBox from "../components/EducationBox";
+import IntroduceBox from "../components/IntroduceBox";
+import ProjectSummaryBox from "../components/ProjectSummaryBox";
 
 function AboutMe() {
   return (
     <div>
       <Toolbar />
-      <div className="mt-8 mx-8 md:mx-16 lg:mx-56 xl:mx-60">
+      <div className="mt-8 mx-10 md:mx-20 lg:mx-60 xl:mx-64">
         <AboutMeHeader />
+        <EducationBox />
+        <IntroduceBox />
+        <ProjectSummaryBox />
       </div>
     </div>
   );
