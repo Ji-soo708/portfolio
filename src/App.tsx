@@ -1,9 +1,10 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Bibbi from './pages/Bibbi';
-import Mocacong from './pages/Mocacong';
-import Baroging from './pages/Baroging';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import AboutMe from "./pages/AboutMe";
+import Bibbi from "./pages/Bibbi";
+import Mocacong from "./pages/Mocacong";
+import Baroging from "./pages/Baroging";
 
 const App: React.FC = () => {
   return (
@@ -11,6 +12,7 @@ const App: React.FC = () => {
       <div>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about-me" element={<AboutMe />} />
           <Route path="/projects/bibbi" element={<Bibbi />} />
           <Route path="/projects/mocacong" element={<Mocacong />} />
           <Route path="/projects/baroging" element={<Baroging />} />

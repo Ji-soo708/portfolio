@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Sticker from "../assets/svg/jisu-sticker.svg";
 
 const Header: React.FC = () => {
@@ -15,16 +16,11 @@ const Header: React.FC = () => {
             <p className="text-[28px] md:text-[36px] lg:text-[46px] font-bold text-black">
               `임지수`입니다.
             </p>
-            <a
-              href="https://github.com/Ji-soo708"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 md:mt-8"
-            >
+            <Link to="/about-me" className="mt-6 md:mt-8">
               <p className="text-sm md:text-lg text-[#1D1D1F] underline">
                 About Me
               </p>
-            </a>
+            </Link>
           </div>
           {/* 오른쪽 부분: 스티커 */}
           <div className="hidden md:flex justify-center lg:justify-end mr-32">
